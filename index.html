@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tip & Bill Splitter</title>
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://jsdelivr.net"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-light d-flex align-items-center min-vh-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm border-0 rounded-4">
+          <div class="card-body p-4">
+            <h3 class="card-title text-center fw-bold mb-4">Tip & Bill Splitter</h3>
+
+            <!-- Error Alert (Hidden by default) -->
+            <div id="error-msg" class="alert alert-danger d-none py-2" role="alert">
+              Please enter a valid bill amount and at least 1 person.
+            </div>
+
+            <!-- Bill Amount -->
+            <div class="mb-3">
+              <label for="bill-input" class="form-label fw-semibold">Total Bill</label>
+              <input
+                type="number"
+                class="form-control"
+                id="bill-input"
+                placeholder="0.00"
+                min="0"
+                step="0.01"
+              />
+            </div>
+
+            <!-- Tip Percentage -->
+            <div class="mb-3">
+              <label for="tip-select" class="form-label fw-semibold">Tip Percentage</label>
+              <select class="form-select" id="tip-select">
+                <option value="0.10">10% (Standard)</option>
+                <option value="0.15" selected>15% (Good)</option>
+                <option value="0.20">20% (Great)</option>
+                <option value="0">0% (No Tip)</option>
+              </select>
+            </div>
+
+            <!-- Number of People -->
+            <div class="mb-4">
+              <label for="people-input" class="form-label fw-semibold">Number of People</label>
+              <input
+                type="number"
+                class="form-control"
+                id="people-input"
+                value="1"
+                min="1"
+              />
+            </div>
+
+            <!-- Calculate Button -->
+            <button id="calculate-btn" class="btn btn-primary w-100 fw-semibold py-2 mb-4">
+              Calculate Split
+            </button>
+
+            <!-- Results Box -->
+            <div class="bg-body-secondary rounded-3 p-3">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Tip per person:</span>
+                <span id="tip-per-person" class="fw-bold">0.00</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="text-muted">Total per person:</span>
+                <span id="total-per-person" class="fw-bold fs-5 text-primary">0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
