@@ -3,7 +3,8 @@
 An interactive, mobile-friendly tip and bill calculator built to practice JavaScript DOM manipulation, form validation, and Bootstrap 5.
 
 ## Live Demo
-[View Live App]((https://moonlight109.github.io/tip-splitter/))
+[Click here to try the Tip & Bill Splitter](https://moonlight109.github.io/tip-splitter/)
+
 
 ## Built With
 * HTML5
